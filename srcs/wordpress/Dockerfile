@@ -1,4 +1,7 @@
 FROM debian::bullseye
+#each from creates a single image
+
+MAINTAINER Nour Fakih fakihnour80@gmail.com
 
 RUN apt-get update && apt-get install -y \
     php7.4-fpm \
@@ -30,5 +33,5 @@ EXPOSE 9000
 WORKDIR /var/www/html
 #execution starts from this directory
 
-CMD ["/usr/local/bin/setup-wordpress.sh"]
+CMD ["../tools/setup-wordpress.sh"]
 #at container start
