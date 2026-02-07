@@ -33,5 +33,5 @@ EXPOSE 9000
 WORKDIR /var/www/html
 #execution starts from this directory
 
-CMD ["../tools/setup-wordpress.sh"]
+ENTRYPOINT ["tools/setup-wordpress.sh"]
 #at container start
