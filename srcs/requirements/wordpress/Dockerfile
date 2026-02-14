@@ -1,7 +1,5 @@
-FROM debian::bullseye
+FROM debian::bookworm
 #each from creates a single image
-
-MAINTAINER Nour Fakih fakihnour80@gmail.com
 
 RUN apt-get update && apt-get install -y \
     php7.4-fpm \
