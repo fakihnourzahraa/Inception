@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     mariadb-client \
     && rm -rf /var/lib/apt/lists/*
-    #-y to accept all
-    #rm the cache to make a smaller image
+    #rm the cache for smaller image
     #running all together means less layers
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
